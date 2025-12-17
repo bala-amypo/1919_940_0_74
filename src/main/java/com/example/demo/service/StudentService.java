@@ -4,6 +4,6 @@ import com.example.demo.entity.Student;
 
 public interface StudentService{
 
-    Student saveStudent(Student student)
+    Student saveStudent(Student student);
 
 }
