@@ -1,7 +1,10 @@
 package com.example.demo.entity;
 
 import java.time.LocalDate;
+@Entity
+@Table(name")
 public class Student {
+    
     private long id;
     private String name;
     private String email;
