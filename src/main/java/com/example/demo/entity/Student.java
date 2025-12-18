@@ -2,6 +2,7 @@ package com.example.demo.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Email;
 
 @Entity
 //@Table(name = "students")
@@ -10,9 +11,18 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotBlank(message="Name field"
+    @NotBlank (message= "Name field cannot be empty")
+    @Size(
     private String name;
+    @Email(message="Invalid email id")
     private String email;
+
+    //@NotNull
+    //@Size(min,max)
+    //@Min
+    //@Max
+    //@Pattern(reg)
+    //@Positive
 
     public Student() {
     }
