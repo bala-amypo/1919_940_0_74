@@ -16,6 +16,7 @@ public class Student {
     @Size(min=3,max=20,message="The user name must be min of 3 and max of 20 characters")
     private String name;
     @Email(message="Invalid email id")
+    @Column(unique=true)
     private String email;
 
     //@NotNull
