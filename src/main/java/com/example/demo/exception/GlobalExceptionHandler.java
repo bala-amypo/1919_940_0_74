@@ -7,7 +7,7 @@ public class GlobalExceptionhandler{
 
     @ExceptionHandler(ResourceNotFoundException.class){
         public ResponseEntity<String>handleNotFound(ResourceNotFoundException ex){
-            return 
+            return new ResponsiveEntity<>.(ex.getMessage(),handle)
         } 
     }
 }
