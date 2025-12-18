@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GlobalExceptionhandler{
 
     @ExceptionHandler(ResourceNotFoundException.class){
-        public String 
+        public ResponseEntity<String>handleNotFound(ResourceNotFoundException ex){
+            return 
+        } 
     }
 }
