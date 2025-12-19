@@ -10,7 +10,7 @@ import com.example.demo.exception.ResourceNotFoundException;
 
 
 @Service
-public class StudentServiceImpl implements StudentService {
+public class StudentServiceImple implements StudentService {
     @Autowired
     StudentRepository studentRepository;
 
@@ -22,10 +22,10 @@ public class StudentServiceImpl implements StudentService {
         .orElseThrow(()-> new ResourceNotFoundException("Student not found"));
     }
     public Student updatedata(Long id, Student student){
-        Student exits=getStudentById(id);
-        exits.setName(student.getName());
-        exits.setEmail(student.getEmail());
-        return studentRepository.save(exits);
+        Student exists=getStudentById(id);
+        exists.setName(student.getName());
+        exists.setEmail(student.getEmail());
+        return studentRepository.save(exists);
         // .orElseThrow(()-> new ResourceNotFoundException("Invalid Email"));
     }
     public Student deletedata(Long id){
