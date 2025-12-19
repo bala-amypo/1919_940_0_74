@@ -25,8 +25,10 @@ public class StudentServiceImple implements StudentService {
         exits.setName(student,getName());
         exits.setEmail(student.getEmail());
         return studentRepository.save(exits);
-        //
         //.orElseThrow(()-> new ResourceNotFoundException(message:"Student not found"));
     } 
-    puclic 
+    public void deletedata(Long id){
+        Student student = getStudentById(id);
+        studentRepository.delete(stduent);
+    }
 }
