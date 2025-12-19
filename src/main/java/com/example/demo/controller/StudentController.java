@@ -19,10 +19,12 @@ public class StudentController {
     private StudentService studentService;
 
     @PostMapping("/postdata")
-    public ResponseEntity<Student> postdata(
-            @Valid @RequestBody Student student) {
-
-        Student savedStudent = studentService.saveStudent(student);
+    public ResponseEntity<Student> postdata(@Valid @RequestBody Student student) {
         return new ResponseEntity<>(savedStudent, HttpStatus.CREATED);
     }
+    @GetMapping("/getdata/{id}")
+    public Student getdata(@PathVariable Long id){
+        return studentService.getStudentById(id);
+    }
+    @PutMapping ("/updatedata/{id}")
 }
