@@ -27,5 +27,9 @@ public class StudentController {
         return studentService.getStudentById(id);
     }
     @PutMapping ("/updatedata/{id}")
-    public Student                                                                ṁ̥ippopoooppppiuiuiiui[0-p     ...//----]
+    public Student updatedStudent(@PathVariable Long id, @valkid @RequestBody Student student){
+        return studentService.updatedata(id,student);
+    }
+    @DeleteMapping("/deletedata/{id}")
+    public ResponseEntity<String> deletedata @PathVariable Long id
 }
