@@ -27,4 +27,5 @@ public class StudentController {
         return studentService.getStudentById(id);
     }
     @PutMapping ("/updatedata/{id}")
+    public Student                                                                ṁ̥ippopoooppppiuiuiiui[0-p     ...//----]
 }
